@@ -23,8 +23,8 @@ void ILDAWidget::draw()
 
     for (auto point : frame.points)
     {
-        int ilda_x = boost::endian::big_to_native(point.x);
-        int ilda_y = boost::endian::big_to_native(point.y);
+        int ilda_x = point.x;
+        int ilda_y = point.y;
 
         int _x = x() + ((ilda_x + 32768) * r_x) / 65535;
         int _y = h() - y() - ((ilda_y + 32768) * r_y) / 65535;

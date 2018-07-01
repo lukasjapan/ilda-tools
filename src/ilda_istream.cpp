@@ -113,9 +113,9 @@ void ILDAIStream::frameFrom3dCoordinatesIndexed()
     {
         read(coordinates);
         Point p;
-        p.x = coordinates.x;
-        p.y = coordinates.y;
-        p.z = coordinates.z;
+        p.x = boost::endian::big_to_native(coordinates.x);
+        p.y = boost::endian::big_to_native(coordinates.y);
+        p.z = boost::endian::big_to_native(coordinates.z);
         if (coordinates.color >= palette->size() || coordinates.status.blanked)
         {
             p.r = 0;
@@ -147,8 +147,8 @@ void ILDAIStream::frameFrom2dCoordinatesIndexed()
     {
         read(coordinates);
         Point p;
-        p.x = coordinates.x;
-        p.y = coordinates.y;
+        p.x = boost::endian::big_to_native(coordinates.x);
+        p.y = boost::endian::big_to_native(coordinates.y);
         p.z = 0;
         if (coordinates.color >= palette->size() || coordinates.status.blanked)
         {
@@ -193,9 +193,9 @@ void ILDAIStream::frameFrom3dCoordinatesTrue()
     {
         read(coordinates);
         Point p;
-        p.x = coordinates.x;
-        p.y = coordinates.y;
-        p.z = coordinates.z;
+        p.x = boost::endian::big_to_native(coordinates.x);
+        p.y = boost::endian::big_to_native(coordinates.y);
+        p.z = boost::endian::big_to_native(coordinates.z);
 
         if (coordinates.status.blanked)
         {
@@ -225,8 +225,8 @@ void ILDAIStream::frameFrom2dCoordinatesTrue()
     {
         read(coordinates);
         Point p;
-        p.x = coordinates.x;
-        p.y = coordinates.y;
+        p.x = boost::endian::big_to_native(coordinates.x);
+        p.y = boost::endian::big_to_native(coordinates.y);
         p.z = 0;
 
         if (coordinates.status.blanked)

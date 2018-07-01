@@ -22,7 +22,7 @@ int main(int argc, char **argv)
                                      "Plays .ild files in an fltk window.\n"
                                      "\n"
                                      "Usage: ilda-player [options] [filename]\n"
-                                     "If no filename is given ILDA-Player will attempt to read the from stdin.\n"
+                                     "If no filename is given ILDA-Player will attempt to read from stdin.\n"
                                      "\n"
                                      "Allowed options:");
         desc.add_options()("fps,f", po::value<int>(&fps)->default_value(20), "Frames per second.");
@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 
         if (vm.count("help"))
         {
-            cout << o << "\n";
+            cerr << o << "\n";
             return 1;
         }
 

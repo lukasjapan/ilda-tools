@@ -7,7 +7,7 @@
 struct Point
 {
     int16_t x, y, z;
-    uint16_t r, g, b;
+    uint8_t r, g, b;
 };
 
 struct Frame
