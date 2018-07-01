@@ -1,5 +1,5 @@
-#ifndef __SRC_FRAME__
-#define __SRC_FRAME__
+#ifndef __SRC_INTERFACE__
+#define __SRC_INTERFACE__
 
 #include <stdint.h>
 #include <vector>

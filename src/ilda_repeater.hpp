@@ -2,7 +2,7 @@
 #define __SRC_ILDA_REPEATER__
 
 #include "ilda.hpp"
-#include "frame.hpp"
+#include "interface.hpp"
 
 class ILDARepeater : public ILDAInput
 {

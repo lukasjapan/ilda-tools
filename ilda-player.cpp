@@ -7,16 +7,6 @@
 
 namespace po = boost::program_options;
 
-void help()
-{
-    cout << "Options:\n"
-            "-fps <n>    Frames per second. Default: 20\n"
-            "-w <n>      Window width in pixel. Default: 500\n"
-            "-h <n>      Window height in pixel. Default: 500\n"
-            "-r          Endlessly repeat the input.\n"
-            "-h          Display this help.\n";
-}
-
 int main(int argc, char **argv)
 {
     try

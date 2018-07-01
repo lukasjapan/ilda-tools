@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <map>
-#include "frame.hpp"
+#include "interface.hpp"
 #include "ilda.hpp"
 
 class ILDAIStream : public ILDAInput
