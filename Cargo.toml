@@ -1,0 +1,16 @@
+[package]
+name = "ilda-tools"
+version = "0.1.0"
+authors = ["Lukas <lukas@cvguy.de>"]
+edition = "2018"
+ 
+[dependencies]
+glium = "*"
+clap = "*"
+hound = "*"
+byteorder = "*"
+usvg = "*"
+lyon_geom = "*"
+chrono = "*"
+rustfft = "*"
+ilda = { path = "../ilda.rs" }
